@@ -38,6 +38,10 @@ public class ProductListPage extends BasePage {
         return Float.parseFloat(driver.findElement(xpath).getText().replace("US$", "").replace(",", "."));
     }
 
+    public float getPrice1(By xpath) {
+        return Float.parseFloat(driver.findElement(xpath).getText().replace("US$", "").replace(",", "."));
+    }
+    
     public boolean verifySortByPriceCorrect() throws Exception {
         float maxPricePage = 0;
 
